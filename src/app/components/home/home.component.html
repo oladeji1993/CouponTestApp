@@ -1,0 +1,317 @@
+<!-- Main Container -->
+<div class="min-h-screen bg-gray-50">
+  <!-- Top Navigation -->
+
+  <!-- Header Banner -->
+  <div class="relative bg-[#FF7A3D] px-6 py-8">
+    <!-- Sun burst decoration -->
+    <div class="absolute left-0 top-0 md:block hidden">
+      <img src="/assets/images/star.svg" alt="" />
+    </div>
+
+    <div class="flex items-center justify-center">
+      <div class="block z-1 items-center md:flex gap-6">
+        <div class="mr-10 leading-50">
+          <h1 class="text-5xl font-bold text-white">Explore all Coupons on</h1>
+          <h2 class="text-4xl font-extralight mt-2 text-white">
+            TwentiesTribe
+          </h2>
+        </div>
+        <div class="relative">
+          <img
+            src="/assets/images/promotion-image.svg"
+            alt="Promotional Image"
+            class="rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute right-0 top-0 md:block hidden">
+      <img class="d-none md:64" src="/assets/images/cloud.svg" alt="" />
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div
+    class="container px-0 py-0 md:px-35 md:py-20 mx-auto flex flex-col md:flex-row gap-6 p-6"
+  >
+    <!-- Filters Sidebar -->
+    <div class="w-full p-8 rounded-md md:w-64 bg-white flex-shrink-0">
+      <div class="space-y-6">
+        <!-- Category Filter -->
+        <div>
+          <h3 class="mb-3 font-semibold text-[#757575]">Category</h3>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input name="res" type="radio" value="Restaurant" class="mr-2" />
+              <span class="font-semibold">Restaurant</span>
+            </label>
+            <label class="flex items-center">
+              <input name="music" type="radio" value="Music" class="mr-2" />
+              <span class="font-semibold">Music</span>
+            </label>
+            <label class="flex items-center">
+              <input name="shopping" type="radio" class="mr-2" />
+              <span class="font-semibold">Shopping</span>
+            </label>
+
+            <label class="flex items-center">
+              <input name="ride" type="radio" class="mr-2" />
+              <span class="font-semibold">Ride</span>
+            </label>
+            <label class="flex items-center">
+              <input name="e-commerce" type="radio" class="mr-2" />
+              <span class="font-semibold">E-commerce</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Price Range -->
+        <div>
+          <h3 class="mb-3 text-[#757575] font-semibold">Price</h3>
+          <input type="range" class="w-full" />
+          <div class="flex justify-between">
+            <span>0</span>
+            <span>Max</span>
+          </div>
+        </div>
+
+        <!-- Percentage Filter -->
+        <div>
+          <h3 class="mb-3 text-[#757575] font-semibold">Percentage</h3>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input name="e-commerce" type="radio" class="mr-2" />
+              <span class="font-semibold">Free</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">0 - 20%</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">10 - 25%</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">30 - 50%</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">50 - 65%</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">65 & Above</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-3 text-[#757575] font-semibold">Location</h3>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input name="e-commerce" type="radio" class="mr-2" />
+              <span class="font-semibold">Lagos</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">Ogun%</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">Oyo%</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">Abuja</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">Port harcourt</span>
+            </label>
+
+            <label class="flex items-center">
+              <input type="radio" class="mr-2" />
+              <span class="font-semibold">Edo</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coupons Grid -->
+    <div class="flex-1">
+      <!-- Search and Sort -->
+      <div class="mb-6 flex flex-col md:flex-row items-center justify-between">
+        <div class="relative w-full md:w-170">
+          <input
+            type="text"
+            placeholder="Search for store items"
+            class="w-full rounded-3xl outline-0 border border-gray-300 px-4 py-2"
+          />
+        </div>
+        <span>sort by:</span>
+        <select class="mt-4 md:mt-0 outline-0 rounded-md px-4">
+          <option>Newest to oldest</option>
+        </select>
+      </div>
+
+      <!-- Coupon Cards Grid -->
+      <div
+        class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <div
+          *ngFor="let coupon of paginatedCoupons"
+          class="rounded-lg border border-gray-300 bg-[#FAF7FD] mx-4 md:mx-0 p-4 shadow-sm"
+        >
+          <div class="mb-3 flex items-center justify-between">
+            <div class="flex justify-between w-100">
+              <div>
+                <img src="/assets/images/jumia-logo.svg" alt="" />
+              </div>
+              <div class="flex gap-2 items-center">
+                <span
+                  ><img src="/assets/images/forward-arrow.svg" alt=""
+                /></span>
+                <span><img src="/assets/images/badge.svg" alt="" /></span>
+              </div>
+            </div>
+
+            <button class="text-gray-400">
+              <i class="fas fa-share"></i>
+            </button>
+          </div>
+          <div class="flex justify-between mt-5 mb-4">
+            <div class="font-bold">Jumia</div>
+            <div class="font-bold">-20%</div>
+          </div>
+          <p class="mb-4 text-sm text-gray-600">Get 20% off on your order</p>
+          <button
+            class="w-full flex items-center gap-2 justify-center rounded-md border border-gray-300 py-2 text-sm hover:bg-gray-50"
+          >
+            <span> See Offer </span>
+            <span><img src="/assets/images/arrow.svg" alt="" /></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-6 flex items-center justify-between">
+        <span class="text-sm">
+          {{ (currentPage - 1) * itemsPerPage + 1 }} - {{ getEndIndex() }} of
+          {{ coupons.length }} pages
+        </span>
+        <div class="flex items-center space-x-2">
+          <button
+            (click)="previousPage()"
+            [disabled]="currentPage === 1"
+            class="rounded-md px-3 py-2 hover:bg-gray-100"
+            [class.opacity-50]="currentPage === 1"
+          >
+            &lt;
+          </button>
+
+          <ng-container
+            *ngFor="let page of [].constructor(totalPages); let i = index"
+          >
+            <button
+              (click)="currentPage = i + 1"
+              [class.underline]="currentPage === i + 1"
+              [class.text-text-purple-600]="currentPage === i + 1"
+              [class.text-dark]="currentPage !== i + 1"
+              class="rounded-md px-3 py-2 hover:bg-purple-600 hover:text-white"
+            >
+              {{ i + 1 }}
+            </button>
+          </ng-container>
+
+          <button
+            (click)="nextPage()"
+            [disabled]="currentPage === totalPages"
+            class="rounded-md px-3 py-2 hover:bg-gray-100"
+            [class.opacity-50]="currentPage === totalPages"
+          >
+            &gt;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Form -->
+<div class="container mx-auto mt-8 max-w-7xl p-6">
+  <div
+    class="rounded-lg my-10 gap-[70px] block md:flex justify-center bg-white p-8 shadow-xl"
+  >
+    <div class="md:w-[407px] w-auto">
+      <img src="/assets/images/contant-us.svg" alt="" />
+
+      <h2 class="mb-2 text-2xl mt-8 font-bold">Don't quite find what you want?</h2>
+      <p class="mb-6 mt-8 text-gray-600">
+        Let us know and we will make it available for you shortly
+      </p>
+    </div>
+    <div>
+      <form class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="block">
+            <div>
+              <label for="">Your Name</label>
+            </div>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="rounded-md border border-[#E0E0E0] p-2"
+            />
+          </div>
+          <div class="block">
+            <div>
+              <label for="">Your Email</label>
+            </div>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="rounded-md border border-[#E0E0E0] p-2"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="block">
+            <div>
+              <label for="">Product name</label>
+            </div>
+            <input
+              type="text"
+              placeholder="Enter name of product"
+              class="rounded-md border border-[#E0E0E0] p-2"
+            />
+          </div>
+          <div class="block">
+            <div>
+              <label for="">Vendor name</label>
+            </div>
+            <input
+              type="text"
+              placeholder="e.g. Jumia, Airpeace, Spotify"
+              class="rounded-md border border-[#E0E0E0] p-2"
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full rounded-md bg-purple-600 py-3 text-white hover:bg-purple-700"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
