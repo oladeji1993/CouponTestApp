@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/styles.css --watch",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:twentiesTribeCouponApp": "node dist/twenties-tribe-coupon-app/server/server.mjs"
