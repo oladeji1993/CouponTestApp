@@ -12,7 +12,7 @@ export class FilterPipe implements PipeTransform {
     if (!searchValue) {
       return value;
     } 
-
+    
     const lowerCaseSearchValue = searchValue.toLowerCase();    
     return value.filter((v: any) => {
       const couponTitle = v.title?.toLowerCase() || '';
