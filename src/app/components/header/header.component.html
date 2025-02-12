@@ -1,14 +1,91 @@
-<nav class="flex items-center justify-between border-b bg-white px-6 py-3">
-    <div class="flex items-center space-x-6">
-      <a href="#" class="text-sm">The what?</a>
-      <a href="#" class="text-sm">Members</a>
-      <a href="#" class="text-sm">Events</a>
-      <a href="#" class="text-sm">Coupons</a>
-      <a href="#" class="text-sm">Courses</a>
-      <a href="#" class="text-sm">Jobs</a>
+
+
+<nav class="flex items-center justify-between mx-10 bg-white px-4 py-3">
+    <!-- Left Section -->
+    <div class="flex space-x-10">
+      <a href="#"> 
+        <img src="/assets/images/logo.svg" alt="Logo" class="h-8 w-auto" />
+      </a>
+  
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#" class="text-sm font-semibold">The what?</a>
+        <a href="#" class="text-sm font-bold flex items-center gap-2">
+          <img src="/assets/images/member.jpg" alt="" class="h-5 w-5" />
+          <span>Members</span>
+        </a>
+        <a href="#" class="text-sm font-bold flex items-center gap-2">
+          <img src="/assets/images/event.jpg" alt="" class="h-5 w-5" />
+          <span>Events</span>
+        </a>
+        <a href="#" class="text-sm font-bold flex items-center gap-2">
+          <img src="/assets/images/coupon.jpg" alt="" class="h-5 w-5" />
+          <span>Coupons</span>
+        </a>
+        <a href="#" class="text-sm font-bold flex items-center gap-2">
+          <img src="/assets/images/courses.jpg" alt="" class="h-5 w-5" />
+          <span>Courses</span>
+        </a>
+        <a href="#" class="text-sm font-bold flex items-center gap-2">
+          <img src="/assets/images/job.jpg" alt="" class="h-5 w-5" />
+          <span>Jobs</span>
+        </a>
+      </div>
     </div>
-    <div class="flex items-center space-x-4">
-      <button class="text-sm">Login</button>
-      <button class="rounded-full bg-purple-600 px-4 py-2 text-sm text-white">Join The Tribe</button>
+  
+    <!-- Right Section -->
+    <div class="hidden md:flex items-center space-x-4">
+      <img class="cursor-pointer h-5 w-5" src="/assets/images/search.svg" alt="Search" />
+      <img src="/assets/images/bar.svg" alt="Menu Icon" class="h-5 w-5" />
+      <button class="text-sm cursor-pointer border rounded-lg border-gray-300 px-4 py-2">
+        Login
+      </button>
+      <button class="rounded-lg cursor-pointer bg-purple-600 px-4 py-2 text-sm text-white">
+        Join The Tribe
+      </button>
     </div>
-</nav>
+  
+    <!-- Mobile Menu Button -->
+    <div class="flex md:hidden">
+      <button *ngIf="!isMenuOpen" (click)="toggleMenu()" class="text-gray-700 focus:outline-none">
+        <img src="/assets/images/menu.png" alt="Menu Icon" class="w-10" />
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div *ngIf="isMenuOpen" class="md:hidden flex flex-col space-y-3 mt-4">
+        <div class="flex justify-end md:hidden">
+            <button (click)="toggleMenu()" class="text-gray-700 focus:outline-none">
+              <img src="/assets/images/menu.png" alt="Menu Icon" class="w-10" />
+            </button>
+          </div>
+      <a href="#" class="text-sm font-semibold">The what?</a>
+      <a href="#" class="text-sm font-bold flex items-center gap-2">
+        <img src="/assets/images/member.jpg" alt="" class="h-5 w-5" />
+        <span>Members</span>
+      </a>
+      <a href="#" class="text-sm font-bold flex items-center gap-2">
+        <img src="/assets/images/event.jpg" alt="" class="h-5 w-5" />
+        <span>Events</span>
+      </a>
+      <a href="#" class="text-sm font-bold flex items-center gap-2">
+        <img src="/assets/images/coupon.jpg" alt="" class="h-5 w-5" />
+        <span>Coupons</span>
+      </a>
+      <a href="#" class="text-sm font-bold flex items-center gap-2">
+        <img src="/assets/images/courses.jpg" alt="" class="h-5 w-5" />
+        <span>Courses</span>
+      </a>
+      <a href="#" class="text-sm font-bold flex items-center gap-2">
+        <img src="/assets/images/job.jpg" alt="" class="h-5 w-5" />
+        <span>Jobs</span>
+      </a>
+      <button class="text-sm cursor-pointer border rounded-lg border-gray-300 px-4 py-2">
+        Login
+      </button>
+      <button class="rounded-lg cursor-pointer bg-purple-600 px-4 py-2 text-sm text-white">
+        Join The Tribe
+      </button>
+    </div>
+  </nav>
+  

@@ -1,4 +1,5 @@
 <!-- Main Container -->
+<app-header></app-header>
 <div class="min-h-screen bg-gray-50">
   <!-- Top Navigation -->
 
@@ -36,38 +37,35 @@
   <div
     class="container px-0 py-0 md:px-35 md:py-20 mx-auto flex flex-col md:flex-row gap-6 p-6"
   >
-    <!-- Filters Sidebar -->
     <div class="w-full p-8 rounded-md md:w-64 bg-white flex-shrink-0">
       <div class="space-y-6">
-        <!-- Category Filter -->
         <div>
           <h3 class="mb-3 font-semibold text-[#757575]">Category</h3>
           <div class="space-y-2">
             <label class="flex items-center">
-              <input name="res" type="radio" value="Restaurant" class="mr-2" />
+              <input name="Category" type="radio" value="Restaurant" class="mr-2" />
               <span class="font-semibold">Restaurant</span>
             </label>
             <label class="flex items-center">
-              <input name="music" type="radio" value="Music" class="mr-2" />
+              <input name="Category" type="radio" value="Music" class="mr-2" />
               <span class="font-semibold">Music</span>
             </label>
             <label class="flex items-center">
-              <input name="shopping" type="radio" class="mr-2" />
+              <input name="Category" type="radio" class="mr-2" />
               <span class="font-semibold">Shopping</span>
             </label>
 
             <label class="flex items-center">
-              <input name="ride" type="radio" class="mr-2" />
+              <input name="Category" type="radio" class="mr-2" />
               <span class="font-semibold">Ride</span>
             </label>
             <label class="flex items-center">
-              <input name="e-commerce" type="radio" class="mr-2" />
+              <input name="Category" type="radio" class="mr-2" />
               <span class="font-semibold">E-commerce</span>
             </label>
           </div>
         </div>
 
-        <!-- Price Range -->
         <div>
           <h3 class="mb-3 text-[#757575] font-semibold">Price</h3>
           <input type="range" class="w-full" />
@@ -77,36 +75,35 @@
           </div>
         </div>
 
-        <!-- Percentage Filter -->
         <div>
           <h3 class="mb-3 text-[#757575] font-semibold">Percentage</h3>
           <div class="space-y-2">
             <label class="flex items-center">
-              <input name="e-commerce" type="radio" class="mr-2" />
+              <input name="percentage" type="radio" class="mr-2" />
               <span class="font-semibold">Free</span>
             </label>
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="percentage" type="radio" class="mr-2" />
               <span class="font-semibold">0 - 20%</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="percentage" type="radio" class="mr-2" />
               <span class="font-semibold">10 - 25%</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="percentage" type="radio" class="mr-2" />
               <span class="font-semibold">30 - 50%</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="percentage" type="radio" class="mr-2" />
               <span class="font-semibold">50 - 65%</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="percentage" type="radio" class="mr-2" />
               <span class="font-semibold">65 & Above</span>
             </label>
           </div>
@@ -116,31 +113,31 @@
           <h3 class="mb-3 text-[#757575] font-semibold">Location</h3>
           <div class="space-y-2">
             <label class="flex items-center">
-              <input name="e-commerce" type="radio" class="mr-2" />
+              <input name="location" type="radio" class="mr-2" />
               <span class="font-semibold">Lagos</span>
             </label>
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="location" type="radio" class="mr-2" />
               <span class="font-semibold">Ogun%</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="location" type="radio" class="mr-2" />
               <span class="font-semibold">Oyo%</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="location" type="radio" class="mr-2" />
               <span class="font-semibold">Abuja</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="location" type="radio" class="mr-2" />
               <span class="font-semibold">Port harcourt</span>
             </label>
 
             <label class="flex items-center">
-              <input type="radio" class="mr-2" />
+              <input name="location" type="radio" class="mr-2" />
               <span class="font-semibold">Edo</span>
             </label>
           </div>
@@ -150,31 +147,30 @@
 
     <!-- Coupons Grid -->
     <div class="flex-1">
-      <!-- Search and Sort -->
       <div class="mb-6 flex flex-col md:flex-row items-center justify-between">
-        <div class="relative w-full md:w-170">
+        <div class="relative block w-full md:w-170">
           <input
             type="text"
+            [(ngModel)]="search"
             placeholder="Search for store items"
             class="w-full rounded-3xl outline-0 border border-gray-300 px-4 py-2"
           />
         </div>
-        <span>sort by:</span>
-        <select class="mt-4 md:mt-0 outline-0 rounded-md px-4">
+        <span class="hidden md:block">sort by:</span>
+        <select class="mt-4 md:mt-0 outline-0 rounded-md hidden md:block px-4">
           <option>Newest to oldest</option>
         </select>
       </div>
 
-      <!-- Coupon Cards Grid -->
       <div
         class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         <div
-          *ngFor="let coupon of paginatedCoupons"
+          *ngFor="let coupon of (paginatedCoupons | filter : search)"
           class="rounded-lg border border-gray-300 bg-[#FAF7FD] mx-4 md:mx-0 p-4 shadow-sm"
         >
           <div class="mb-3 flex items-center justify-between">
-            <div class="flex justify-between w-100">
+            <div class="flex justify-between w-full">
               <div>
                 <img src="/assets/images/jumia-logo.svg" alt="" />
               </div>
@@ -191,10 +187,10 @@
             </button>
           </div>
           <div class="flex justify-between mt-5 mb-4">
-            <div class="font-bold">Jumia</div>
-            <div class="font-bold">-20%</div>
+            <div class="font-bold">{{ coupon?.brand?.name }} </div>
+            <div class="font-bold">-{{ coupon?.coupon_discount}}%</div>
           </div>
-          <p class="mb-4 text-sm text-gray-600">Get 20% off on your order</p>
+          <p class="mb-4 text-sm text-gray-600"> Get {{ coupon?.brand?.coupon_off }}</p>
           <button
             class="w-full flex items-center gap-2 justify-center rounded-md border border-gray-300 py-2 text-sm hover:bg-gray-50"
           >
@@ -246,6 +242,7 @@
     </div>
   </div>
 </div>
+
 <!-- Contact Form -->
 <div class="container mx-auto mt-8 max-w-7xl p-6">
   <div
@@ -254,7 +251,9 @@
     <div class="md:w-[407px] w-auto">
       <img src="/assets/images/contant-us.svg" alt="" />
 
-      <h2 class="mb-2 text-2xl mt-8 font-bold">Don't quite find what you want?</h2>
+      <h2 class="mb-2 text-2xl mt-8 font-bold">
+        Don't quite find what you want?
+      </h2>
       <p class="mb-6 mt-8 text-gray-600">
         Let us know and we will make it available for you shortly
       </p>
@@ -268,18 +267,20 @@
             </div>
             <input
               type="text"
+              style="width: 100%"
               placeholder="Enter your name"
-              class="rounded-md border border-[#E0E0E0] p-2"
+              class="rounded-md border outline-0 border-[#E0E0E0] p-2"
             />
           </div>
-          <div class="block">
+          <div class="md:block">
             <div>
               <label for="">Your Email</label>
             </div>
             <input
+              style="width: 100%"
               type="email"
               placeholder="Enter your email"
-              class="rounded-md border border-[#E0E0E0] p-2"
+              class="rounded-md border outline-0 border-[#E0E0E0] p-2"
             />
           </div>
         </div>
@@ -289,9 +290,10 @@
               <label for="">Product name</label>
             </div>
             <input
+              style="width: 100%"
               type="text"
               placeholder="Enter name of product"
-              class="rounded-md border border-[#E0E0E0] p-2"
+              class="rounded-md border outline-0 border-[#E0E0E0] p-2"
             />
           </div>
           <div class="block">
@@ -299,17 +301,19 @@
               <label for="">Vendor name</label>
             </div>
             <input
+              style="width: 100%"
               type="text"
               placeholder="e.g. Jumia, Airpeace, Spotify"
-              class="rounded-md border border-[#E0E0E0] p-2"
+              class="rounded-md border outline-0 border-[#E0E0E0] p-2"
             />
           </div>
         </div>
         <button
           type="submit"
-          class="w-full rounded-md bg-purple-600 py-3 text-white hover:bg-purple-700"
+          class="w-full rounded-md bg-purple-600 flex justify-center items-center gap-2 py-3 text-white hover:bg-purple-700"
         >
-          Submit
+          <span>Submit</span>
+          <span><img src="/assets/images/btn-arrow.svg" alt="" /></span>
         </button>
       </form>
     </div>
