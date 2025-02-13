@@ -33,9 +33,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "output.css"
-            ],
+              "src/styles.scss"            ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -99,8 +97,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "output.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }

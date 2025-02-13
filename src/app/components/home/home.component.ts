@@ -1,4 +1,4 @@
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../header/header.component';
@@ -16,7 +16,7 @@ interface Coupon {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, NgStyle,FormsModule, HeaderComponent, PipesModule],
+  imports: [NgFor, NgIf, NgStyle,FormsModule, HeaderComponent, PipesModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -57,6 +57,19 @@ export class HomeComponent implements OnInit {
     if (this.currentPage > 1) {
       this.currentPage--;
     }
+  }
+
+  getDisplayedPages(): number[] {
+    const range: number[] = [];
+    const maxVisiblePages = 5; 
+    const start = Math.max(1, this.currentPage - Math.floor(maxVisiblePages / 2));
+    const end = Math.min(this.totalPages, start + maxVisiblePages - 1);
+
+    for (let i = start; i <= end; i++) {
+      range.push(i);
+    }
+
+    return range;
   }
     
   onSubmit(): void {
