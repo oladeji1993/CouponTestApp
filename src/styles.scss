@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
-@import "./output.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 
 * {
   font-family: "Inter", serif;

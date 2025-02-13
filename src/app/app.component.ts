@@ -10,19 +10,19 @@ import { PipesModule } from './Core/pipes/pipes.module';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit  {
+export class AppComponent  {
 
-  ngOnInit(): void {
-    this.loadStyles('styles.scss');
-    this.loadStyles('output.css');
-    this.loadStyles('./output.css');
-  }
+  // ngOnInit(): void {
+  //   this.loadStyles('styles.scss');
+  //   this.loadStyles('output.css');
+  //   this.loadStyles('./output.css');
+  // }
 
-  loadStyles(cssFilePath: string): void {
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.href = cssFilePath;
-    document.head.appendChild(linkElement);
-  }
+  // loadStyles(cssFilePath: string): void {
+  //   const linkElement = document.createElement('link');
+  //   linkElement.rel = 'stylesheet';
+  //   linkElement.href = cssFilePath;
+  //   document.head.appendChild(linkElement);
+  // }
   
 }
